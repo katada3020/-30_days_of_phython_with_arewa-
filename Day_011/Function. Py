@@ -1,0 +1,82 @@
+def add_two_numbers (a, b):
+    total = a+ b
+    return total
+print(add_two_numbers(2, 6))
+def add_two_numbers(a, b):
+  return a + b
+
+def area_of_circle(r):
+  total = 3.14 * r * r
+  return total
+print("the area of a circle is",area_of_circle(5))
+
+def convert_celcius_to_f(c):
+	result = (c * 9/5)/32
+	return(result)
+print("the conversion is", convert_celcius_to_f(9))
+
+def add_all_nums(*args):
+  result = 0
+  for num in args:
+    if not isinstance(num, (int, float)):
+      return "Error: Only numbers are allowed as inputs."
+    result += num
+  return result
+print(add_all_nums())
+
+def check_season(month):
+  if month in [12, 1, 2]:
+    return "Winter"
+  elif month in [3, 4, 5]:
+    return "Spring"
+  elif month in [6, 7, 8]:
+    return "Summer"
+  elif month in [9, 10, 11]:
+    return "Autumn"
+  else:
+    return "Error: Invalid Month Number"
+ #solving quadratic equation
+def sol_quadratic_eqn(a, b, c):
+    delta = b**2 - 4 * a * c
+    if delta < 0:
+        return "No real solution"
+    elif delta == 0:
+        return -b / (2 * a)
+    else:
+        x1 = (-b + (b**2 - 4 * a * c)**0.5) / (2 * a)
+        x2 = (-b - (b**2 - 4 * a * c)**0.5) / (2 * a)
+        return (x1, x2)
+print("my answer to quadratic is",sol_quadratic_eqn(1,2,3))
+#function and list
+def print_list(lst):
+       for item in lst:
+        print(item)
+        
+def reverse_list(lst):
+    reverse = []
+    for i in range(len(lst) - 1, -1, -1):
+        reverse.append(lst[i])
+    return reverse
+
+def capitalize_list_items(lst):
+    capitalized = []
+    for item in lst:
+        capitalized.append(item.capitalize())
+    return capitalized
+    
+def add_item(lst, item):
+    lst.append(item)
+    return lst
+def sum_of_numbers(n):
+    return sum(range(n + 1))
+print(sum_of_numbers(2))
+
+def sum_of_odds(n):
+    return sum(i for i in range(n + 1) if i % 2 != 0)
+print(sum_of_odds(2))
+
+def sum_of_even(n):
+    return sum(i for i in range(n + 1) if i % 2 == 0)
+
+
+
